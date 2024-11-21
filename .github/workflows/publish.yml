@@ -14,9 +14,10 @@ jobs:
           node-version-file: ./package.json
           cache: 'npm'
           cache-dependency-path: ./package-lock.json
-      - run: npm ci
+      - run: npm i
       - run: npm run lint
       # - run: npm test
+      - run: npm run build
       - uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_TOKEN }}

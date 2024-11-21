@@ -4,13 +4,13 @@
 
 ## Features
 
--   **Sort AWS Regions by Distance**: Calculate and sort AWS regions based on their distance from the user's current geolocation (needs user consent for location access).
+-   **Sort AWS Regions by Distance**: Calculate and sort AWS regions based on their distance from the user's current [GeoLocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) (needs user consent for location access).
 -   **Extensible and Modular**: More utility functions will be added in future updates.
 -   **TypeScript Support**: Fully typed with TypeScript for better developer experience and safety.
 
 ## Installation
 
-Install the package via npm:
+Install the package via [npm](https://www.npmjs.com/package/aws-region-utils):
 
 ```bash
 npm install aws-region-utils
@@ -18,18 +18,16 @@ npm install aws-region-utils
 
 ## Usage
 
-### Current Functionality
-
-#### Get all AWS Regions
+### Get all AWS Regions
 
 ```typescript
 import { awsRegions } from 'aws-region-utils';
 
 const regions = awsRegions();
-console.log('AWS Regions:', regions);
+console.log(regions);
 ```
 
-#### Sorting AWS Regions by Distance
+### Sorting AWS Regions by Distance
 
 You can use the awsRegionsByDistance function to sort AWS regions by their distance from the user's location:
 
@@ -38,11 +36,13 @@ import { awsRegionsByDistance } from 'aws-region-utils';
 
 awsRegionsByDistance()
     .then((regions) => {
-        console.log('Sorted AWS Regions by Distance:', regions);
+        console.log(regions);
     })
     .catch((error) => {
-        console.error('Error:', error);
+        console.error(error);
     });
 ```
 
-### More Features Coming Soon!
+## More Features Coming Soon!
+
+All contributions are welcome.
