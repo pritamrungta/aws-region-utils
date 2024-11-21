@@ -1,0 +1,48 @@
+{
+  "name": "aws-region-utils",
+  "version": "0.0.0",
+  "description": "Utility functions around AWS Regions, like getting the closest region.",
+  "main": "index.js",
+  "files": [
+    "lib/**/**",
+    "!**/*.tsbuildinfo",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pritamrungta/aws-region-utils.git"
+  },
+  "keywords": [
+    "aws",
+    "region",
+    "closest",
+    "nearest"
+  ],
+  "author": "Pritam Rungta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pritamrungta/aws-region-utils/issues"
+  },
+  "homepage": "https://github.com/pritamrungta/aws-region-utils#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.12.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.15.0"
+  },
+  "volta": {
+    "node": "20.17.0"
+  },
+  "dependencies": {
+    "geolib": "^3.3.4"
+  }
+}

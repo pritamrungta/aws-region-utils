@@ -1,0 +1,5 @@
+.DS_Store
+node_modules
+lib
+aws-region-utils-*.tgz
+package
