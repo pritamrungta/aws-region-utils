@@ -1,3 +1,4 @@
+import regionData from './data/aws-regions.json';
 import { awsRegions, awsRegionsByDistance } from './utils';
 
-export { awsRegions, awsRegionsByDistance };
+export { regionData, awsRegions, awsRegionsByDistance };
