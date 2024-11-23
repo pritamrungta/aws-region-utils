@@ -1,0 +1,54 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: block;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: block;
+}
+
+#pre-canvas {
+  margin-bottom: 16px;
+}
+
+#tooltip {
+  position: absolute;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 1000;
+}
+
+#tooltip.show {
+  opacity: 1;
+  pointer-events: auto;
+}

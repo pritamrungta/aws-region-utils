@@ -10,4 +10,5 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   { plugins: { prettier: eslintPluginPrettier } },
+  { ignores: ['**/dist/**', '**/lib/**', '**/node_modules/**'] },
 ];
