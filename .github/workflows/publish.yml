@@ -10,6 +10,32 @@ on:
     #   - src/**
 
 jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          registry-url: 'https://registry.npmjs.org'
+          node-version-file: ./demo/package.json
+          cache: 'npm'
+          cache-dependency-path: ./demo/package-lock.json
+      - run: npm i
+        with:
+          working-directory: ./demo
+      - run: npm run lint
+        with:
+          working-directory: ./demo
+      # - run: npm test
+      #   with:
+      #     working-directory: ./demo
+      - run: npm run build
+        with:
+          working-directory: ./demo
+      - run: npm run deploy
+        with:
+          working-directory: ./demo
+
   publish:
     runs-on: ubuntu-latest
     steps:
