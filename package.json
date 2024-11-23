@@ -1,6 +1,6 @@
 {
   "name": "aws-region-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Utility functions around AWS Regions, like getting the closest region.",
   "main": "lib/index.js",
   "files": [
