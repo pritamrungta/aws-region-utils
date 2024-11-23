@@ -50,5 +50,7 @@ jobs:
         with:
           name: demo
           path: ./github-pages
+      - run: ls
+      - uses: actions/configure-pages@v4
       - id: deployment
         uses: actions/deploy-pages@v4
