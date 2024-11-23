@@ -10,21 +10,26 @@ on:
 jobs:
   demo:
     runs-on: ubuntu-latest
+    env:
+      working-directory: demo
     steps:
       - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            ${{env.working-directory}}
       - uses: actions/setup-node@v4
         with:
           registry-url: 'https://registry.npmjs.org'
-          node-version-file: ./demo/package.json
+          node-version-file: ${{env.working-directory}}/package.json
           cache: 'npm'
-          cache-dependency-path: ./demo/package-lock.json
+          cache-dependency-path: ${{env.working-directory}}/package-lock.json
       - run: npm i
-        working-directory: ./demo
+        working-directory: ${{env.working-directory}}
       - run: npm run lint
-        working-directory: ./demo
+        working-directory: ${{env.working-directory}}
       # - run: npm test
-      #   working-directory: ./demo
+      #   working-directory: ${{env.working-directory}}
       - run: npm run build
-        working-directory: ./demo
+        working-directory: ${{env.working-directory}}
       - run: npm run deploy
-        working-directory: ./demo
+        working-directory: ${{env.working-directory}}
