@@ -2,6 +2,8 @@
 
 `aws-region-utils` is a utility library for working with AWS regions. It provides functions to calculate distances, sort regions by proximity, and more. This package is designed to help developers easily work with AWS region data in geospatial contexts.
 
+### Demo playground - https://pritamrungta.github.io/aws-region-utils
+
 ## Features
 
 -   **Sort AWS Regions by Distance**: Calculate and sort AWS regions based on their distance from the user's current [GeoLocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) (needs user consent for location access).
